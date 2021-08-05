@@ -105,7 +105,7 @@ public class PetControllerTests {
             .param("birthDate", "2015/02/12")
         )
             .andExpect(model().attributeHasNoErrors("owner"))
-            .andExpect(model().attributeHasErrors("pet"))
+            .andExpect(model().attributeHasErrors("pets"))
             .andExpect(status().isOk())
             .andExpect(view().name("pets/createOrUpdatePetForm"));
     }
